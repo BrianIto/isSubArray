@@ -7,5 +7,7 @@ test("Check if is subset successfully", () => {
 	expect(isSub(["oi", "sou", "Brian"], ["sou", "Brian"])).toBeTruthy()
 	expect(isSub(["Administrador", "de", "flores"], ["Administrador", "de", "materiais"])).toBeFalsy()
 	expect(isSub(["Administrador"], ["Administrador", "de", "materiais"])).toBeFalsy()
+	expect(isSub([["ABC", "BCD"], "A", "B"], [["ABC", "BCD"]])).toBeTruthy()
+	expect(isSub([["ABC", "BCD"], "A", "B"], [["ABC"]])).toBeFalsy()
 });
 
